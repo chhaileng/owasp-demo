@@ -14,7 +14,6 @@ import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import React from 'react'
 
 import OwaspLayout from '../../layout/owasp-layout'
-import PingTool from '../../components/PingTool'
 
 const Demo = () => {
   return (

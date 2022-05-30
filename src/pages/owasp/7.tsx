@@ -22,7 +22,7 @@ const Demo = () => {
       <Tabs mt={10} isLazy>
         <TabList mb='1em'>
           <Tab>🤔 What ???</Tab>
-          <Tab>🖥 Demo</Tab>
+          <Tab>🖥 Example</Tab>
           <Tab>👮‍♂️ Prevention</Tab>
         </TabList>
         <TabPanels>
@@ -31,16 +31,13 @@ const Demo = () => {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
-                An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application
+                There may be authentication weaknesses if the application permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords.
               </ListItem>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
                 The malicious data sent by attacker will trick the interpreter to execute bad command to stole data or control the system
               </ListItem>
             </List>
-
-            <Heading my={4} fontSize={'xl'} as='h3'>What are the injections?</Heading>
-            <Text>SQL Injection, NoSQL Injection, Remote Code Execution, XSS, Local File Inclusion, ...</Text>
           </TabPanel>
           <TabPanel>
             <PingTool />

@@ -29,11 +29,11 @@ const Demo = () => {
       <Flex pt={100} justify={'center'}>
         <Box>
           <Heading>OWASP</Heading>
-          <Text>🟡 A01:2021 Broken Access Control</Text>
+          <Text>🟢 A01:2021 Broken Access Control</Text>
           <Text>✅ A02:2021 Cryptographic Failures</Text>
           <Text>✅ A03:2021 Injection</Text>
           <Text>A04:2021 Insecure Design</Text>
-          <Text>A05:2021 Security Misconfiguration</Text>
+          <Text>🟡 A05:2021 Security Misconfiguration</Text>
           <Text>A06:2021 Vulnerable and Outdated Components</Text>
           <Text>A07:2021 Identification and Authentication Failures</Text>
           <Text>A08:2021 Software and Data Integrity Failures</Text>

@@ -27,7 +27,7 @@ const Demo = () => {
       <Tabs mt={10} isLazy>
         <TabList mb='1em'>
           <Tab>🤔 What ???</Tab>
-          <Tab>🐛 Cases</Tab>
+          <Tab>🐛 Example</Tab>
           <Tab>👮‍♂️ Prevention</Tab>
         </TabList>
         <TabPanels>
@@ -49,8 +49,20 @@ const Demo = () => {
             </Flex>
           </TabPanel>
           <TabPanel>
-            <Heading mb={4} fontSize={'xl'} as ='h3'>Real Cases</Heading>
+            <Heading mb={4} fontSize={'xl'} as ='h3'>Example</Heading>
             <List spacing={3}>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Unauthenticated user can make a request to API for viewing all users
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                User A can modify information of User B
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Normal user has a permission to access Admin user
+              </ListItem>
               <ListItem>
                 <ListIcon as={WarningTwoIcon} color='yellow.500' />
                 ...
