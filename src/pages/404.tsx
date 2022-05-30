@@ -9,11 +9,6 @@ import React from 'react'
 import Layout from '../layout'
 
 const Index = () => {
-  const toast = useToast();
-
-
-  
-
   return (
     <Layout>
       NOT FOUND

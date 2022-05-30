@@ -43,7 +43,7 @@ const Demo = () => {
                 Failures may lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits.
               </ListItem>
             </List>
-            <Flex justify={'center'}>
+            <Flex mt={10} justify={'center'}>
               <Image src="/images/access-control.svg" />
               {/* https://portswigger.net/web-security/access-control */}
             </Flex>

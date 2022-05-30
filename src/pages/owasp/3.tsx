@@ -45,7 +45,7 @@
               <Heading my={4} fontSize={'xl'} as='h3'>What are the injections?</Heading>
               <Text>SQL Injection, NoSQL Injection, Remote Code Execution, XSS, Local File Inclusion, XXE ...</Text>
 
-              <Flex justify={'center'}>
+              <Flex mt={10} justify={'center'}>
                 <Image src="/images/sql-injection.svg" />
                 {/* https://portswigger.net/web-security/sql-injection */}
               </Flex>

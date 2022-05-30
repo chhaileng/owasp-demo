@@ -20,7 +20,6 @@ import { useRouter } from 'next/router'
 
 
 import Layout from '../../layout'
-import PingTool from '../../components/PingTool'
 
 const Demo = () => {
   const router = useRouter()
@@ -31,7 +30,7 @@ const Demo = () => {
         <Box>
           <Heading>OWASP</Heading>
           <Text>🟡 A01:2021 Broken Access Control</Text>
-          <Text>A02:2021 Cryptographic Failures</Text>
+          <Text>✅ A02:2021 Cryptographic Failures</Text>
           <Text>✅ A03:2021 Injection</Text>
           <Text>A04:2021 Insecure Design</Text>
           <Text>A05:2021 Security Misconfiguration</Text>
@@ -39,7 +38,7 @@ const Demo = () => {
           <Text>A07:2021 Identification and Authentication Failures</Text>
           <Text>A08:2021 Software and Data Integrity Failures</Text>
           <Text>A09:2021 Security Logging and Monitoring Failures</Text>
-          <Text>A10:2021 Server-side Request Forgery</Text>
+          <Text>🟢 A10:2021 Server-side Request Forgery</Text>
         </Box>
       </Flex>
       <Flex justify={'center'}>

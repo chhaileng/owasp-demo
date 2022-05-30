@@ -1,4 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
+import NextNProgress from 'nextjs-progressbar'
 
 import theme from '../theme'
 import { AppProps } from 'next/app'
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Basic Web Application Security</title>
       </Head>
+      <NextNProgress />
       <Component {...pageProps} />
     </ChakraProvider>
   )
