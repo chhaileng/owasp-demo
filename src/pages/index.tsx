@@ -1,16 +1,24 @@
 import {
-  Link as ChakraLink,
+  Link,
   Text,
   Code,
-  List,
   Image,
   Box,
   Flex,
-  Link,
-  useToast,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  List,
+  ListItem,
+  ListIcon
 } from '@chakra-ui/react'
 // import FileUpload from '../components/FileUpload'
-import { ArrowForwardIcon } from '@chakra-ui/icons'
+import { ArrowForwardIcon, ExternalLinkIcon, HamburgerIcon, CheckIcon } from '@chakra-ui/icons'
 
 import { Button } from '@chakra-ui/react';
 import React from 'react'
@@ -20,6 +28,7 @@ import { useRouter } from 'next/router';
 
 const Index = () => {
   const router = useRouter();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <Layout>
@@ -27,8 +36,47 @@ const Index = () => {
         <Image src="/images/poster.jpg"/>
       </Flex>
       <Flex m={10} justify={'center'}>
-        <Button colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
+        <Link _hover={{textDecoration: 'none'}} href='https://chhaileng.com/about' isExternal><Button mx={2} colorScheme={'purple'} rightIcon={<ExternalLinkIcon />}>$(whoami)</Button></Link>
+        <Button mx={2} colorScheme={'green'} rightIcon={<HamburgerIcon />} onClick={onOpen}>Contents</Button>
+        <Button mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
       </Flex>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Contents</ModalHeader>
+          <ModalCloseButton />
+
+          <ModalBody>
+            <List spacing={3}>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Purpose
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Pentesting
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Web Application Security
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Top 10 OWASP Security Standard
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                How to Protection
+              </ListItem>
+            </List>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Layout>
   )
 }

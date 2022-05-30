@@ -72,7 +72,7 @@ const Demo = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                Enforce the URL schema, port, and destination with a positive allow list
+                Enforce the URL schema, port, and destination with a whitelist
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
@@ -81,10 +81,6 @@ const Demo = () => {
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
                 Disable HTTP redirections
-              </ListItem>
-              <ListItem>
-                <ListIcon as={CheckIcon} color='green.500' />
-                Be aware of the URL consistency to avoid attacks such as DNS rebinding and "time of check, time of use" (TOCTOU) race conditions
               </ListItem>
             </List>
           </TabPanel>

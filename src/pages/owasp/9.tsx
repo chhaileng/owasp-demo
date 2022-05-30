@@ -14,7 +14,6 @@ import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import React from 'react'
 
 import OwaspLayout from '../../layout/owasp-layout'
-import PingTool from '../../components/PingTool'
 
 const Demo = () => {
   return (
@@ -22,7 +21,6 @@ const Demo = () => {
       <Tabs mt={10} isLazy>
         <TabList mb='1em'>
           <Tab>🤔 What ???</Tab>
-          <Tab>🖥 Example</Tab>
           <Tab>👮‍♂️ Prevention</Tab>
         </TabList>
         <TabPanels>
@@ -39,7 +37,7 @@ const Demo = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
-                Vague or improper logs that do not provide any valuable information or insights
+                Improper logs that do not provide any valuable information or insights
               </ListItem>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
@@ -54,9 +52,6 @@ const Demo = () => {
                 Logs not protected for integrity
               </ListItem>
             </List>
-          </TabPanel>
-          <TabPanel>
-            <PingTool />
           </TabPanel>
           <TabPanel>
             <Heading mb={4} fontSize={'xl'} as ='h3'>How to prevent?</Heading>
@@ -80,8 +75,11 @@ const Demo = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                
-Ensure that your logs are tamper-proof
+                Ensure that your logs are tamper-proof
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Design auditable data entities
               </ListItem>
             </List>
           </TabPanel>

@@ -9,8 +9,10 @@ import {
   TabPanels,
   TabPanel,
   Heading,
+  Flex,
+  Image,
 } from '@chakra-ui/react'
-import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
+import { CheckIcon, CloseIcon, WarningTwoIcon } from '@chakra-ui/icons'
 import React from 'react'
 
 import OwaspLayout from '../../layout/owasp-layout'
@@ -31,16 +33,26 @@ const Demo = () => {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
-                
-              </ListItem>
-              <ListItem>
-                <ListIcon as={CloseIcon} color='red.500' />
-                
+                Relate to code and infrastructure that does not protect against integrity violations.
               </ListItem>
             </List>
+
+            <Flex mt={10} justify={'center'}>
+              <Image src="/images/software-integrity.jpeg" />
+            </Flex>
           </TabPanel>
           <TabPanel>
-            ex
+            <Heading mb={4} fontSize={'xl'} as='h3'>Example</Heading>
+            <List spacing={3}>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                An application relies upon auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application.
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Attackers could potentially upload their own updates to be distributed and run on all installations.
+              </ListItem>
+            </List>
           </TabPanel>
           <TabPanel>
             <Heading mb={4} fontSize={'xl'} as ='h3'>How to prevent?</Heading>
@@ -48,15 +60,15 @@ const Demo = () => {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                
+                Use external libraries, modules, dependency with integrity checksum verification
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                
+                Use trusted content delivery networks (CDNs)
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                
+                Update libraries, modules, software, tools with integrity verification
               </ListItem>
             </List>
           </TabPanel>

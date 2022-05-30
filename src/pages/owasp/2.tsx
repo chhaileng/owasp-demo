@@ -12,6 +12,8 @@ import {
   HStack,
   Tooltip,
   Tag,
+  Flex,
+  Image,
 } from '@chakra-ui/react'
 import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import React from 'react'
@@ -39,6 +41,10 @@ const Demo = () => {
                 Sensitive data are password, bank info, health info and personal info,
               </ListItem>
             </List>
+
+            <Flex mt={10} justify={'center'}>
+              <Image src="/images/mitm.jpg" />
+            </Flex>
           </TabPanel>
 
           <TabPanel>
@@ -64,6 +70,10 @@ const Demo = () => {
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
                 Use two-ways TLS ✌️
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Verify all internal traffic, e.g. between load balancers, web servers, or back-end systems
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />

@@ -42,15 +42,31 @@ const Demo = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
-                Security headers are not sent or are overly permissive (over-permissive CORS or CSP policies for instance)
+                Security headers are not sent or are overly permissive
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                Over-permissive CORS
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                Directory listing
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                Sensitive data exposure
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                Detail information in error messages that lead attacker to guess more about the system
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                Misconfiguration on server tools 🔧
               </ListItem>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
                 Security features are not enabled (firewall rules, SELinux, Windows Defender, etc…)
-              </ListItem>
-              <ListItem>
-                <ListIcon as={CloseIcon} color='red.500' />
-                All the issues that could lead to XXE (the new issue in class)
               </ListItem>
             </List>
           </TabPanel>
@@ -87,8 +103,9 @@ const Demo = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                Audit your infrastructure and get regular pentest to ensure high security of your apps/services. It's a general advice that would help detect and mitigate most of the trivial issues.
+                Audit your infrastructure and get regular pentest to ensure high security of your apps/services.
               </ListItem>
+
             </List>
           </TabPanel>
         </TabPanels>

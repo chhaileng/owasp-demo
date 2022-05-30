@@ -30,7 +30,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Flex h={'50px'} padding={5} as="header" justifyContent={'space-between'}>
         <Heading color="orange.400" size={'lg'}><Link href='/'>Basic Web App Security</Link></Heading>
         <Flex gap={1}>
-          <Link href="/"><Button color="orange.400" variant={router.pathname == '/' ? 'solid' : 'ghost'} size={'sm'}>Home</Button></Link>
+          <Link href="/"><Button color="orange.400" variant={router.pathname == '/' ? 'solid' : 'ghost'} size={'sm'}>HOME</Button></Link>
           <Link href="/owasp"><Button color="orange.400" variant={router.pathname.startsWith('/owasp') ? 'solid' : 'ghost'} size={'sm'}>OWASP</Button></Link>
           <IconButton variant={'ghost'} color="orange.400" size={'sm'} aria-label='settings' icon={ isDark ? <SunIcon /> : <MoonIcon />} onClick={toggleColorMode} />
         </Flex>
