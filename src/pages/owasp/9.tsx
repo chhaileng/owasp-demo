@@ -22,7 +22,7 @@ const Demo = () => {
       <Tabs mt={10} isLazy>
         <TabList mb='1em'>
           <Tab>🤔 What ???</Tab>
-          <Tab>🖥 Demo</Tab>
+          <Tab>🖥 Example</Tab>
           <Tab>👮‍♂️ Prevention</Tab>
         </TabList>
         <TabPanels>

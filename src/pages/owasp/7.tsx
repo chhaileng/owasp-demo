@@ -40,7 +40,7 @@ const Demo = () => {
             </List>
           </TabPanel>
           <TabPanel>
-            <PingTool />
+            ex
           </TabPanel>
           <TabPanel>
             <Heading mb={4} fontSize={'xl'} as ='h3'>How to prevent?</Heading>
@@ -48,15 +48,15 @@ const Demo = () => {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                Validate and sanitize user input 💪
+                
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                Clean user input data and take care of keywords, commands, special characters
+                
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                use up-to-date external libraries
+
               </ListItem>
             </List>
           </TabPanel>
