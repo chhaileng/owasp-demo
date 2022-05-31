@@ -9,8 +9,10 @@ import {
   TabPanels,
   TabPanel,
   Heading,
+  Flex,
+  Image
 } from '@chakra-ui/react'
-import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
+import { CheckIcon, CloseIcon, WarningTwoIcon } from '@chakra-ui/icons';
 import React from 'react'
 
 import OwaspLayout from '../../layout/owasp-layout'
@@ -33,14 +35,29 @@ const Demo = () => {
                 <ListIcon as={CloseIcon} color='red.500' />
                 There may be authentication weaknesses if the application permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords.
               </ListItem>
-              <ListItem>
-                <ListIcon as={CloseIcon} color='red.500' />
-                The malicious data sent by attacker will trick the interpreter to execute bad command to stole data or control the system
-              </ListItem>
             </List>
+
+            <Flex mt={10} justify={'center'}>
+              <Image src="/images/password-reset-poisoning.svg" />
+              {/* https://portswigger.net/web-security/authentication */}
+            </Flex>
           </TabPanel>
           <TabPanel>
-            ex
+            <Heading mb={4} fontSize={'xl'} as ='h3'>Example</Heading>
+            <List spacing={3}>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Application allow weak password and permit brute force.
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                No session validation at server side may lead to session hijacking
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                ...
+              </ListItem>
+            </List>
           </TabPanel>
           <TabPanel>
             <Heading mb={4} fontSize={'xl'} as ='h3'>How to prevent?</Heading>
@@ -48,15 +65,19 @@ const Demo = () => {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                
+                Implement strong password policy 💪
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                
+                Implement multi-factor authentication
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-
+                Implement password lockout mechanism
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color='green.500' />
+                Implement key rotation for session encryption
               </ListItem>
             </List>
           </TabPanel>

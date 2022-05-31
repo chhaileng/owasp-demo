@@ -9,8 +9,9 @@ import {
   TabPanels,
   TabPanel,
   Heading,
+  Link
 } from '@chakra-ui/react'
-import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
+import { CheckIcon, CloseIcon, WarningTwoIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import React from 'react'
 
 import OwaspLayout from '../../layout/owasp-layout'
@@ -21,7 +22,7 @@ const Demo = () => {
       <Tabs mt={10} isLazy>
         <TabList mb='1em'>
           <Tab>🤔 What ???</Tab>
-          {/* <Tab>🖥 Demo</Tab> */}
+          <Tab>🖥 Example</Tab>
           <Tab>👮‍♂️ Prevention</Tab>
         </TabList>
         <TabPanels>
@@ -70,9 +71,19 @@ const Demo = () => {
               </ListItem>
             </List>
           </TabPanel>
-          {/* <TabPanel>
-            <PingTool />
-          </TabPanel> */}
+          <TabPanel>
+            <Heading mb={4} fontSize={'xl'} as ='h3'>Example</Heading>
+            <List spacing={3}>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Misconfiguration for Unix binary <Link color={'orange.500'} isExternal href='https://gtfobins.github.io/'>GTFOBins <ExternalLinkIcon /></Link>
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Misconfiguration for Windows binary <Link color={'orange.500'} isExternal href='https://lolbas-project.github.io/'>LOLBAS <ExternalLinkIcon /></Link>
+              </ListItem>
+            </List>
+          </TabPanel>
           <TabPanel>
             <Heading mb={4} fontSize={'xl'} as ='h3'>How to prevent?</Heading>
 

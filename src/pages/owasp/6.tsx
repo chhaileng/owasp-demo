@@ -14,6 +14,7 @@ import {
   Tag,
   Flex,
   Image,
+  Code
 } from '@chakra-ui/react'
 import { CheckIcon, CloseIcon, WarningTwoIcon } from '@chakra-ui/icons';
 import React from 'react'
@@ -67,6 +68,10 @@ const Demo = () => {
               <ListItem>
                 <ListIcon as={WarningTwoIcon} color='yellow.500' />
                 Node.JS 'node-serialize' RCE
+              </ListItem>
+              <ListItem>
+                <ListIcon as={WarningTwoIcon} color='yellow.500' />
+                Using known vulnerability functions (e.g. in Python <Code>eval()</Code>, <Code>input()</Code>, <Code>exec()</Code>, ...)
               </ListItem>
               <ListItem>
                 <ListIcon as={WarningTwoIcon} color='yellow.500' />

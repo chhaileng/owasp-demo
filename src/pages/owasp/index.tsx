@@ -2,14 +2,7 @@ import {
   Text,
   List,
   ListItem,
-  ListIcon,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanels,
-  TabPanel,
   Heading,
-  Box,
   Flex,
   Image,
   Button,
@@ -46,7 +39,7 @@ const Demo = () => {
           <ListItem><Link href="/owasp/4">A04:2021 Insecure Design</Link></ListItem>
           <ListItem><Link href="/owasp/5">✅ A05:2021 Security Misconfiguration</Link></ListItem>
           <ListItem><Link href="/owasp/6">✅ A06:2021 Vulnerable and Outdated Components</Link></ListItem>
-          <ListItem><Link href="/owasp/7">A07:2021 Identification and Authentication Failures</Link></ListItem>
+          <ListItem><Link href="/owasp/7">✅ A07:2021 Identification and Authentication Failures</Link></ListItem>
           <ListItem><Link href="/owasp/8">✅ A08:2021 Software and Data Integrity Failures</Link></ListItem>
           <ListItem><Link href="/owasp/9">✅ A09:2021 Security Logging and Monitoring Failures</Link></ListItem>
           <ListItem><Link href="/owasp/10">✅ A10:2021 Server-side Request Forgery</Link></ListItem>
