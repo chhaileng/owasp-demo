@@ -13,8 +13,9 @@ import {
   Flex,
   Image,
   Button,
+  Tooltip,
 } from '@chakra-ui/react'
-import { CheckIcon, CloseIcon, ArrowForwardIcon} from '@chakra-ui/icons'
+import { ArrowBackIcon, ArrowForwardIcon} from '@chakra-ui/icons'
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -53,7 +54,14 @@ const Demo = () => {
         </List>
         <Image h={150} objectFit={'cover'} src="/images/owasp.jpg" />
       </Flex>
-      <Button mt={8} onClick={() => router.push('/owasp/1')} rightIcon={<ArrowForwardIcon />}>Let's Go</Button>
+      <Flex mt={8} justify="space-between">
+        <Tooltip hasArrow label="Home">
+          <Button onClick={() => router.push('/')} leftIcon={<ArrowBackIcon />}>Previous</Button>
+        </Tooltip>
+        <Tooltip hasArrow label="Penetration Test">
+          <Button onClick={() => router.push('/pentest')} rightIcon={<ArrowForwardIcon />}>Next</Button>
+        </Tooltip>
+      </Flex>
     </Layout>
   )
 }

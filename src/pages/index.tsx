@@ -1,9 +1,6 @@
 import {
   Link,
-  Text,
-  Code,
   Image,
-  Box,
   Flex,
   useDisclosure,
   Modal,
@@ -15,9 +12,9 @@ import {
   ModalFooter,
   List,
   ListItem,
-  ListIcon
+  ListIcon,
+  Tooltip,
 } from '@chakra-ui/react'
-// import FileUpload from '../components/FileUpload'
 import { ArrowForwardIcon, ExternalLinkIcon, HamburgerIcon, CheckIcon } from '@chakra-ui/icons'
 
 import { Button } from '@chakra-ui/react';
@@ -36,9 +33,15 @@ const Index = () => {
         <Image src="/images/poster.jpg"/>
       </Flex>
       <Flex m={10} justify={'center'}>
-        <Link _hover={{textDecoration: 'none'}} href='https://chhaileng.com/about' isExternal><Button mx={2} colorScheme={'purple'} rightIcon={<ExternalLinkIcon />}>$(whoami)</Button></Link>
-        <Button mx={2} colorScheme={'green'} rightIcon={<HamburgerIcon />} onClick={onOpen}>Contents</Button>
-        <Button mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
+        <Tooltip hasArrow label="About me xD">
+          <Link _hover={{textDecoration: 'none'}} href='https://chhaileng.com/about' isExternal><Button mx={2} colorScheme={'purple'} rightIcon={<ExternalLinkIcon />}>$(whoami)</Button></Link>
+        </Tooltip>
+        <Tooltip hasArrow label="Presentation Contents">
+          <Button mx={2} colorScheme={'green'} rightIcon={<HamburgerIcon />} onClick={onOpen}>Contents</Button>
+        </Tooltip>
+        <Tooltip hasArrow label="Purpose">
+          <Button mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/purpose')}>Getting Started</Button>
+        </Tooltip>
       </Flex>
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -73,7 +76,9 @@ const Index = () => {
           </ModalBody>
 
           <ModalFooter>
-            <Button size={'sm'} mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
+            <Tooltip hasArrow label="Purpose">
+              <Button size={'sm'} mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/purpose')}>Getting Started</Button>
+            </Tooltip>
           </ModalFooter>
         </ModalContent>
       </Modal>

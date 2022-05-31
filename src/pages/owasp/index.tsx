@@ -6,8 +6,9 @@ import {
   Flex,
   Image,
   Button,
+  Tooltip,
 } from '@chakra-ui/react'
-import { CheckIcon, CloseIcon, ArrowForwardIcon} from '@chakra-ui/icons'
+import { ArrowBackIcon, ArrowForwardIcon} from '@chakra-ui/icons'
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -36,7 +37,7 @@ const Demo = () => {
           <ListItem><Link href="/owasp/1">✅ A01:2021 Broken Access Control</Link></ListItem>
           <ListItem><Link href="/owasp/2">✅ A02:2021 Cryptographic Failures</Link></ListItem>
           <ListItem><Link href="/owasp/3">✅ A03:2021 Injection</Link></ListItem>
-          <ListItem><Link href="/owasp/4">A04:2021 Insecure Design</Link></ListItem>
+          <ListItem><Link href="/owasp/4">✅ A04:2021 Insecure Design</Link></ListItem>
           <ListItem><Link href="/owasp/5">✅ A05:2021 Security Misconfiguration</Link></ListItem>
           <ListItem><Link href="/owasp/6">✅ A06:2021 Vulnerable and Outdated Components</Link></ListItem>
           <ListItem><Link href="/owasp/7">✅ A07:2021 Identification and Authentication Failures</Link></ListItem>
@@ -46,7 +47,14 @@ const Demo = () => {
         </List>
         <Image h={150} objectFit={'cover'} src="/images/owasp.jpg" />
       </Flex>
-      <Button mt={8} onClick={() => router.push('/owasp/1')} rightIcon={<ArrowForwardIcon />}>Let's Go</Button>
+      <Flex mt={8} justify="space-between">
+        <Tooltip hasArrow label="Penetration Test">
+          <Button onClick={() => router.push('/pentest')} leftIcon={<ArrowBackIcon />}>Previous</Button>
+        </Tooltip>
+        <Tooltip hasArrow label="Broken Access Control">
+          <Button onClick={() => router.push('/owasp/1')} rightIcon={<ArrowForwardIcon />}>Let's Go</Button>
+        </Tooltip>
+      </Flex>
     </Layout>
   )
 }

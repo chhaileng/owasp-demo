@@ -33,7 +33,15 @@ const Demo = () => {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CloseIcon} color='red.500' />
-                There may be authentication weaknesses if the application permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords.
+                There may be authentication weaknesses if the application permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                Application has flaws in the password reset or recovery flows
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CloseIcon} color='red.500' />
+                No validation for session identifiers after email/password update, logout, inactivity, re-login
               </ListItem>
             </List>
 
@@ -69,7 +77,7 @@ const Demo = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                Implement multi-factor authentication
+                Implement multi-factor authentication (MFA)
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
