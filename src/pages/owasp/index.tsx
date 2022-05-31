@@ -27,7 +27,7 @@ const Demo = () => {
           <Text as="span" color="orange.500" fontWeight={'bold'}>OWASP</Text> is a security standard of Web Application for developers to understand risks of Web Application.
         </ListItem>
         <ListItem>
-        <Text as="span" color="orange.500" fontWeight={'bold'}>OWASP</Text> is a security standard of Web Application for developers to understand risks of Web Application.
+          <Text as="span" color="orange.500" fontWeight={'bold'}>OWASP</Text> is updated regularly by evaluating on risk level of vulnerabilities that is usually happened on Web Application.
         </ListItem>
       </List>
       
