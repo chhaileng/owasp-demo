@@ -67,13 +67,13 @@ const Index = () => {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color='green.500' />
-                How to Protection
+                How to Protect
               </ListItem>
             </List>
           </ModalBody>
 
           <ModalFooter>
-            <Button mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
+            <Button size={'sm'} mx={2} colorScheme={'blue'} rightIcon={<ArrowForwardIcon />} onClick={() => router.push('/owasp')}>Getting Started</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

@@ -20,14 +20,14 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 
-import Layout from '../../layout'
+import Layout from '../layout'
 
 const Demo = () => {
   const router = useRouter()
 
   return (
     <Layout>
-      <Heading my={8} as='h3'>OWASP: Open Web Application Security Project</Heading>
+      <Heading my={8} as='h3'>Purpose</Heading>
       <List spacing={3}>
         <ListItem>
           <Text as="span" color="orange.500" fontWeight={'bold'}>OWASP</Text> is a security standard of Web Application for developers to understand risks of Web Application.

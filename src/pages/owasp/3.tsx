@@ -18,6 +18,7 @@
 
   import OwaspLayout from '../../layout/owasp-layout'
   import PingTool from '../../components/PingTool'
+import VerySecureBank from '../../components/VerySecureBank'
 
   const Demo = () => {
     return (
@@ -26,6 +27,7 @@
           <TabList mb='1em'>
             <Tab>🤔 What ???</Tab>
             <Tab>🖥 Demo</Tab>
+            <Tab>😁 Another Demo xD</Tab>
             <Tab>👮‍♂️ Prevention</Tab>
           </TabList>
           <TabPanels>
@@ -52,6 +54,9 @@
             </TabPanel>
             <TabPanel>
               <PingTool />
+            </TabPanel>
+            <TabPanel>
+              <VerySecureBank />
             </TabPanel>
             <TabPanel>
               <Heading mb={4} fontSize={'xl'} as ='h3'>How to prevent?</Heading>

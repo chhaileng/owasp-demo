@@ -82,11 +82,11 @@ const Demo = () => {
             </List>
 
             <Heading mt={4} fontSize={'xl'} as ='h3'>Other Keywords</Heading>
-              <HStack mb={8} mt={2}>
-                <Tooltip label="Cambodia Data Exchange">
-                  <Tag _hover={{cursor: 'pointer'}} colorScheme={'purple'}>CamDX</Tag>
-                </Tooltip>
-              </HStack>
+            <HStack mb={8} mt={2}>
+              <Tooltip label="Cambodia Data Exchange">
+                <Tag _hover={{cursor: 'pointer'}} colorScheme={'purple'}>CamDX</Tag>
+              </Tooltip>
+            </HStack>
           </TabPanel>
         </TabPanels>
       </Tabs>
